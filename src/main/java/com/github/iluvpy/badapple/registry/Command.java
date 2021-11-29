@@ -34,6 +34,7 @@ class BadAppleCommand extends Thread {
         player.sendMessage(new LiteralText("BadApple Started"), true);
         player.sendMessage(new LiteralText(System.getProperty("user.dir")), false);
         Vec3d playerPos = player.getPos();
+        setBlock(world, new BlockPos(playerPos.x, playerPos.y-1.0f, playerPos.z), Blocks.BEDROCK); // add a block where the player can stand on
 
         for (int i = 0; i < 20; i++) {
             for (float y = -HEIGHT; y < HEIGHT; y++) {

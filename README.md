@@ -1,9 +1,12 @@
-# Fabric Example Mod
+## Bad apple mod
+this minecraft mod adds the "BadApple" command, this command will display the badapple video through blocks
 
-## Setup
+## Start command
+to start the command you need to run `/BadApple` inside your minecraft (superflat world is recommended)
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+## setup (MINECRAFT_CLIENT config)
+if you want to run the mod using the gradle configuration then run `gradlew genSource` and place the `video_data/BadlApple` folder into the `run` folder 
+and run the configuration.
 
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## jar setup
+if you want to build your own jar file then you need to go into `video_data` and follow the instructions 
