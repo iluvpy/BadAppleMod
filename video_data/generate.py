@@ -1,7 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 import time
-DIVISOR = 6
+DIVISOR = 10
 
 def main() -> None:
     cap = cv2.VideoCapture('bad_apple.mp4')
