@@ -1,10 +1,15 @@
 import cv2
-import matplotlib.pyplot as plt
-import time
-DIVISOR = 10
+import os
+
+DIVISOR = 2
 
 def main() -> None:
-    cap = cv2.VideoCapture('bad_apple.mp4')
+    path = input("video file: ")
+    if not os.path.exists(path):
+        print("Invalid path")
+        return
+
+    cap = cv2.VideoCapture(path)
     videoData = open("videoData.txt", "w+")
     width = int(cap.get(3)/DIVISOR)
     height = int(cap.get(4)/DIVISOR)
@@ -15,9 +20,10 @@ def main() -> None:
     print(f"width: {width}")
     print(f"height: {height}")
 
-    frames = 1
     while(cap.isOpened()):
         ret, frame = cap.read()
+        if not ret:
+            break 
         frame_shape = frame.shape
         i_r = int(frame_shape[0]/DIVISOR)
         for i in range(i_r):
@@ -28,10 +34,6 @@ def main() -> None:
                 videoData.write(f"{0 if res < 255*3 else 1}")
         videoData.write("e") # 'e' means end of a frame
     
-
-        frames += 1
-        if frames > 3000:
-            break
     cap.release()
     videoData.close()
 
