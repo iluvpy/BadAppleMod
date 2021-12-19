@@ -1,7 +1,7 @@
 import cv2
 import os
 
-DIVISOR = 2
+DIVISOR = 10
 
 def main() -> None:
     path = input("video file: ")
