@@ -18,6 +18,6 @@ to start the command you need to run `/BadApple` inside your minecraft world (su
 
 
 
-<img src="https://i.imgur.com/n87lGeQ.png" alt="image image"/></a>
+<img src="https://i.imgur.com/XSYDSkg.png" alt="example image 1" /></a>
 
-<img src="https://i.imgur.com/GWXtNSf.png" alt="example image"/></a>
+<img src="https://i.imgur.com/WkBtIPe.png" alt="example image 2" /></a>
