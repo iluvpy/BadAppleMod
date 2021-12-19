@@ -15,3 +15,8 @@ if you want to build your own jar file then you need to go into `video_data` and
 ## Start command
 (read the setup) <br>
 to start the command you need to run `/BadApple` inside your minecraft world (superflat world is recommended)
+
+
+[Imgur](https://i.imgur.com/n87lGeQ.png)
+<br>
+[Imgur2](https://i.imgur.com/GWXtNSf.png)
