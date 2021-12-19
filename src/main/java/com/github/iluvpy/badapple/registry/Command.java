@@ -15,5 +15,12 @@ public class Command {
                 return 1;
             }));
         });
+
+        CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> {
+            dispatcher.register(literal("BadAppleStop").executes(context -> {
+                BadAppleCommand.isAlreadyExecuting = false;
+                return 1;
+            }));
+        });
     }
 }

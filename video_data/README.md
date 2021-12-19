@@ -8,5 +8,5 @@ minecraft with the gradle config
 
 
 ## Info
-the `DIVISOR = 10` is the value that divides the video size, so a video that is 200x100 would become 20x10.
+the `DIVISOR` variable inside generate.py is the value that divides the video size, so a video that is 200x100 would become 20x10.
 Changing this value will make the video bigger or smaller, but it will take much much longer to parse the video

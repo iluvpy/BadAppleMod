@@ -14,7 +14,7 @@ import java.util.Vector;
 
 public class BadAppleCommand extends Thread {
     public static boolean isAlreadyExecuting = false;
-    public static final float PLAYER_DISTANCE = 30.0f;
+    public static final float PLAYER_DISTANCE = 60.0f;
     public Vector<BlockPos> placedBlock = new Vector<BlockPos>();
 
     @Override
@@ -56,7 +56,7 @@ public class BadAppleCommand extends Thread {
                 }
                 player.sendMessage(new LiteralText("Finished loading video data"), false);
                 player.setPitch(90.0f); // look down
-                player.setPos(0.0f, PLAYER_DISTANCE, 0.0f);
+                player.setPos(WIDTH/2.0f, PLAYER_DISTANCE, HEIGHT/2.0f);
                 player.sendMessage(new LiteralText("BadApple Started"), false);
                 player.sendMessage(new LiteralText("width: " + WIDTH), false);
                 player.sendMessage(new LiteralText("height: " + HEIGHT), false);
@@ -65,9 +65,10 @@ public class BadAppleCommand extends Thread {
                 int x = 0;
                 int z = 0;
                 for (Vector<Vector<Boolean>> frame : allPixels) {
+                    if (!BadAppleCommand.isAlreadyExecuting) {break;}
                     for (Vector<Boolean> layer : frame) {
                         for (boolean pixel : layer) {
-                            BlockPos pos = new BlockPos(playerPos.x+x, 10.0f, playerPos.z+z);
+                            BlockPos pos = new BlockPos(x, 10.0f, z);
                             if (pixel) {
                                 setBlock(world, pos, Blocks.WHITE_WOOL);
                             } else {

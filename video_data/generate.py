@@ -1,7 +1,7 @@
 import cv2
 import os
 
-DIVISOR = 10
+DIVISOR = 5
 
 def main() -> None:
     path = input("video file: ")
@@ -31,7 +31,7 @@ def main() -> None:
                 id = i*DIVISOR
                 jd = j*DIVISOR
                 res = int(frame[id][jd][0])+int(frame[id][jd][1])+int(frame[id][jd][2])
-                videoData.write(f"{0 if res < 255*3 else 1}")
+                videoData.write(f"{0 if res < 255*1.5 else 1}")
         videoData.write("e") # 'e' means end of a frame
     
     cap.release()
