@@ -1,5 +1,8 @@
 ## Bad apple mod
-this minecraft mod adds the "BadApple" command, this command will display the bad apple video in blocks
+this minecraft mod for 1.17 adds the "BadApple" command, this command will display the bad apple video in blocks
+
+## Requirements
+- java 16 and above
 
 ## setup (MINECRAFT_CLIENT config)
 if you want to run the mod inside your gradle minecraft client config then <br>
